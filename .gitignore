@@ -1,4 +1,5 @@
 /.vscode/
 /.idea/
 
+getrandom_bytes
 run_after_exit
