@@ -1,8 +1,15 @@
 CFLAGS=-Wall -std=gnu99
+CXXFLAGS=-Wall -std=gnu++11
 
-TARGETS=run_after_exit getrandom_bytes
+TARGETS= \
+	copy_dir \
+	run_after_exit \
+	getrandom_bytes
 
 all: $(TARGETS)
+
+copy_dir: copy_file_range/copy_dir.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
 getrandom_bytes: getrandom/getrandom_bytes.c
 	$(CC) $(CFLAGS) -o $@ $<
