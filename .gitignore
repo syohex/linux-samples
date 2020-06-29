@@ -4,3 +4,7 @@
 copy_dir
 getrandom_bytes
 run_after_exit
+
+*.out
+*.exe
+*~
